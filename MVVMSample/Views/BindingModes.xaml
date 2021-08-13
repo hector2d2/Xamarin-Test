@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MVVMSample.Views.BindingModes"
+    Visual="Material">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Source"
+                   x:Name="source"
+                   Text="Initial"
+                   BackgroundColor="White"/>
+            <Entry Placeholder="Target"
+                   BackgroundColor="White"
+                   Text="{Binding Source={x:Reference source}, Path=Text, Mode=OneWay}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
